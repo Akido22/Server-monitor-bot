@@ -1,0 +1,6 @@
+python-telegram-bot[application]
+paramiko
+pypsrp
+requests
+psutil
+flask

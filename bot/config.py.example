@@ -1,0 +1,22 @@
+# bot/config.py.example
+# Скопируй в config.py и заполни свои данные
+
+TOKEN = "1234567890:YOUR_TELEGRAM_BOT_TOKEN"  # Получи у @BotFather
+ADMIN_USER_ID = 123456789  # Твой Telegram ID (узнай у @userinfobot)
+
+SERVERS = {
+    "linux-server": {
+        "host": "192.168.1.10",
+        "port": 22,
+        "user": "admin",
+        "password": "your_password",
+        "type": "linux"
+    },
+    "windows-server": {
+        "host": "192.168.1.20",
+        "port": 5985,
+        "user": "Administrator",
+        "password": "your_password",
+        "type": "windows"
+    }
+}
