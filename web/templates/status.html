@@ -1,0 +1,26 @@
+<!-- web/templates/status.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мониторинг</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <meta http-equiv="refresh" content="30" />
+</head>
+<body>
+  <h1>🌐 Сервера</h1>
+  <table>
+    <tr><th>Сервер</th><th>IP</th><th>Статус</th><th>Когда</th><th>Сообщение</th></tr>
+    {% for name, data in servers.items() %}
+    <tr class="{{ 'up' if data.up else 'down' }}">
+      <td><b>{{ name }}</b></td>
+      <td>{{ data.host }}</td>
+      <td>{{ '🟢 Работает' if data.up else '🔴 Упал' }}</td>
+      <td>{{ data.ago }}</td>
+      <td><small>{{ data.msg[:100] }}</small></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <footer>Автообновление: 30 сек. | Мониторинг: каждые {{ (loop.index / 60) if loop.index > 60 else loop.index }} мин.</footer>
+</body>
+</html>

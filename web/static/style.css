@@ -1,0 +1,8 @@
+/* web/static/style.css */
+body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background: #2c3e50; color: white; }
+.up { background: #e6ffe6; }
+.down { background: #ffe6e6; }
+footer { margin-top: 30px; color: #777; font-size: 0.9em; }
